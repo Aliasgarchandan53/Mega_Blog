@@ -41,7 +41,6 @@ function PostForm({ post }) {
                 if (file) {
                     data.featuredimageid = file.$id;
                     // Log userData before creating post
-                    // console.log('Creating post with userData:', usersData);
                     const dbPost = await appwriteService.createPost({
                         ...data,
                         userid: usersData.$id,
