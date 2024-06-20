@@ -11,7 +11,7 @@ import {
   createRoutesFromElements,
 } from "react-router-dom";
 import Home from './pages/Home.jsx'
-import { AuthLayout, Login } from './components/index.js'
+import {AuthLayout,Login} from './components/index.js'
 
 
 import AddPost from "./pages/AddPost";

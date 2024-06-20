@@ -1,9 +1,9 @@
 import React from 'react'
-import {SignUp as SignupComponent} from "../components/index"
+import {SignUp} from "../components/index"
 function Signup() {
   return (
     <div className='py-8'>
-      <SignupComponent/>
+      <SignUp />
     </div>
   )
 }

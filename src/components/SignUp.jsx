@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { login as authLogin } from "../store/authSlice";
-import { Button, Logo, Input } from "./index";
+import {Logo,Input} from "./index"
 import { useDispatch } from "react-redux";
 import authService from "../appwrite/auth";
 import { useForm } from "react-hook-form";
 
-function SignUp() {
+export default function SignUp() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
@@ -33,7 +33,7 @@ function SignUp() {
       >
         <div className="mb-2 flex justify-center">
           <span className="inline-block w-full max-w-[100px]">
-            <Logo width="100%" />
+            < Logo width="100%" />
           </span>
         </div>
         <h2 className="text-center text-2xl font-bold leading-tight">
@@ -52,14 +52,14 @@ function SignUp() {
 
         <form onSubmit={handleSubmit(create)}>
           <div className="space-y-5">
-            <Input
+            < Input
               label="Full name: "
               placeholder="Enter your full name "
               {...register("name", {
                 required: true,
               })}
             />
-            <Input
+            < Input
               label="Email: "
               placeholder="Enter your email"
               type="email"
@@ -72,7 +72,7 @@ function SignUp() {
                 },
               })}
             />
-            <Input
+            < Input
               label="Password: "
               type="password"
               placeholder="Enter your password"
@@ -80,9 +80,9 @@ function SignUp() {
                 required: true,
               })}
             />
-            <Button type="submit" className="w-full">
+            <button type="submit" className="w-full">
               Create Account
-            </Button>
+            </button>
           </div>
         </form>
       </div>
@@ -90,4 +90,3 @@ function SignUp() {
   );
 }
 
-export default SignUp;
